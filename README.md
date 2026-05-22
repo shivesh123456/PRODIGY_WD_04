@@ -162,14 +162,6 @@ Consider adding:
 - Client logos section
 - More interactive elements
 
-## Contact Information
-
-For inquiries or collaborations:
-- Email: shivesh.m@example.com
-- LinkedIn: linkedin.com/in/shiveshm
-- GitHub: github.com/shiveshm
-- Phone: +1 (234) 567-890
-
 ## License
 
 This portfolio template is created for personal use. Feel free to customize and use it for your own portfolio.
