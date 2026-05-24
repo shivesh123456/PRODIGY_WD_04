@@ -166,7 +166,7 @@ Consider adding:
 
 For inquiries or collaborations:
 - Email: shivesh.m@example.com
-- LinkedIn: linkedin.com/in/shiveshm
+- LinkedIn: linkedin.com/shiveshm
 - GitHub: github.com/shiveshm
 - Phone: +1 (234) 567-890
 
