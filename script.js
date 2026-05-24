@@ -214,12 +214,18 @@ function initProfileUpload() {
 
     // Default SM placeholder SVG
     const smPlaceholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100' fill='%234a90e2'/%3E%3Ctext x='100' y='120' font-size='60' text-anchor='middle' fill='white' font-weight='bold'%3ESM%3C/text%3E%3C/svg%3E";
+    const storageKey = 'profileImageData';
+
+    // Restore saved image on page load
+    const savedImage = localStorage.getItem(storageKey);
+    profileImage.src = savedImage || smPlaceholder;
 
     profileContainer.addEventListener('click', (e) => {
         // Shift+Click to reset to SM placeholder
         if (e.shiftKey) {
             profileImage.src = smPlaceholder;
             profileUpload.value = '';
+            localStorage.removeItem(storageKey);
             return;
         }
         // Regular click to upload new photo
@@ -234,6 +240,7 @@ function initProfileUpload() {
         const reader = new FileReader();
         reader.onload = () => {
             profileImage.src = reader.result;
+            localStorage.setItem(storageKey, reader.result);
         };
         reader.readAsDataURL(file);
     });
